@@ -1,0 +1,35 @@
+{
+  "texts": [
+    "Computer revolutionieren die Bueroarbeit",
+    "Elektronengehirn uebernimmt Rechenaufgaben",
+    "Arbeiter fuerchten Rationalisierung",
+    "Das Wetter in Hamburg ist regnerisch"
+  ],
+  "sim_matrix": [
+    [
+      1.0,
+      0.4320036470890045,
+      0.388727605342865,
+      0.23006367683410645
+    ],
+    [
+      0.4320036470890045,
+      0.9999999403953552,
+      0.4076225459575653,
+      0.35114067792892456
+    ],
+    [
+      0.388727605342865,
+      0.4076225459575653,
+      0.9999998807907104,
+      0.34770092368125916
+    ],
+    [
+      0.23006367683410645,
+      0.35114067792892456,
+      0.34770092368125916,
+      1.0
+    ]
+  ],
+  "dimensionality": 384
+}
