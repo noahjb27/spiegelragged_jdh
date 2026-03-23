@@ -1,60 +1,39 @@
-# Journal of Digital History Author's Repository
+# HistoRAG: Designing a Methodologically Informed Retrieval-Augmented Generation System for Historical Research
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/C2DH/template_repo_JDH/main?filepath=article.ipynb)
+**Journal of Digital History** submission repository
 
-This repository serves as a resource for authors submitting articles to the [Journal of Digital History](https://journalofdigitalhistory.org).
-It contains a Jupyter notebook that provides an example and a simple structure that can be used to write articles for the journal.
-The repository also includes a `preflight`github action that can be automatically triggered on commit, but by default, it is set to `workflow_dispatch`and actionable from the `actions` page on GitHub.
-The preflight action generates a report within the repository that contains information about the adherence of the article to the submission guidelines.
+## Authors
 
-## Contents
+- Noah J. Kim-Baumann [![ORCID](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0009-0004-6368-3061), Humboldt-Universität zu Berlin
+- Torsten Hiltmann [![ORCID](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-6757-6210), Humboldt-Universität zu Berlin
 
-`article.ipynb` - This Jupyter notebook provides an example and a simple structure that authors can use to write articles for the Journal of Digital History. You can rename it according to your article name.
+## Abstract
 
-`.github/workflows/github-actions-preflight.yml` - This workflow file contains the preflight action that can be triggered automatically on commit or manually using the workflow_dispatch event to check that the article respects the Journal guidelines.
+This article presents HistoRAG, a Retrieval-Augmented Generation framework designed for historical research. Through a case study analysing *Der Spiegel* (1950–1979) and the computerisation discourse of the early Federal Republic, we demonstrate three methodological interventions — separated retrieval and generation, temporal windowing, and LLM-as-judge evaluation — that embed historiographical principles into system architecture. The framework preserves source traceability and interpretive authority while enabling historians to work with large corpora at scale.
 
-The preflight action generates or updates a report markdown file in the repository that provides information about the adherence of the article to the submission guidelines, usually named `report.md`
+## Repository Structure
 
-`requirements.txt` - stores information about all the libraries, modules, and packages in itself that are used while developing a particular project.
+- `article.ipynb` — The article notebook (narrative, hermeneutic, and data layers)
+- `media/` — Images and figures used in the article
+- `script/` — Supporting data and analysis scripts
+- `corpus_data/` — Corpus data (yearly CSV files from *Der Spiegel*)
+- `requirements.txt` — Python dependencies
+- `runtime.txt` — Python runtime version specification
+- `.github/workflows/` — JDH preflight validation action
 
-`runtime.txt` - specify the version of the runtime (e.g. the version of Python ). Have python-x.y in runtime.txt to run the repository with Python version x.y
+## Running the Notebook
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/noahjb27/spiegelragged_jdh/main?filepath=article.ipynb)
 
-## Getting Started
+```bash
+pip install -r requirements.txt
+jupyter notebook article.ipynb
+```
 
-This repository it's a _template_, that is, it can be used as a starting point for new repositories.
-On GitHub.com:
+## Preflight Validation
 
-1. navigate to the main page of the repository.
-2. Above the file list, click Use this template.
-3. Select Create a new repository.
-4. Type a name for your new repository, and an optional description.
-5. Click Create repository from template.
-
-Please follow the rest of the documentation on [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) to understand how to create a new repository from this template.
-
-Use the example notebook as a template to write your article. You can modify the notebook to suit your needs and add your content.
-
-## Preflight Action
-
-To check if the article respects the Guidelines, we decided to create a `preflight` GitHub action that can be triggered automatically on commit - or manually using the `workflow_dispatch` event. The action is triggered by the `github-actions-preflight.yml` file in the `.github/workflows` folder.
-By default, the preflight action is set to `workflow_dispatch`, which means you can manually trigger it by going to the "Actions" tab in the repository, selecting the "Preflight" workflow, and clicking the "Run workflow" button.
-The preflight action will generate a report in the repository that provides information about the adherence of your article to the submission guidelines.
-
-## MyBinder
-
-The repository also contains a `requirements.txt` and a `runtime.txt` file that can be used to create a MyBinder environment. Check: https://mybinder.readthedocs.io/en/latest/using/config_files.html#preparing-a-repository-for-binder
-The MyBinder environment can be used to run the example notebook to test that the code runs smoothly. 
-
-## Contribution Guidelines
-
-We welcome contributions to this repository that aim to improve the example notebook, the preflight action, or the overall workflow for authors submitting articles to the Journal of Digital History. Just contact us or open an issue.
+The repository includes a GitHub Actions workflow that validates the notebook against JDH submission guidelines. Trigger it manually from the Actions tab or it runs on push.
 
 ## License
 
-Copyright (C) 2023 university of Luxembourg.
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-This program is distributed in the hope that it will be useful, but without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose. See the GNU Affero General Public License for more details.
-You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
-
-We hope this repository and the provided example notebook are helpful for authors submitting articles to the Journal of Digital History. If you have any questions, feedback, or suggestions, please feel free to open an issue or contact us. Thank you for your contribution!
+This article is published under the [Creative Commons Attribution License (CC-BY)](https://creativecommons.org/licenses/by/4.0/).
