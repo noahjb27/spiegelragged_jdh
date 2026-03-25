@@ -1,4 +1,4 @@
-# HistoRAG: Designing a Methodologically Informed Retrieval-Augmented Generation System for Historical Research
+# HistoRAG: Designing a Methodologically Informed Retrieval-Augmented Generation System for Historical Research — Demonstrated through a Case Study of Der Spiegel (1950–1979) and the Computerisation of the Early Federal Republic
 
 **Journal of Digital History** submission repository
 
@@ -9,7 +9,7 @@
 
 ## Abstract
 
-This article presents HistoRAG, a Retrieval-Augmented Generation framework designed for historical research. Through a case study analysing *Der Spiegel* (1950–1979) and the computerisation discourse of the early Federal Republic, we demonstrate three methodological interventions — separated retrieval and generation, temporal windowing, and LLM-as-judge evaluation — that embed historiographical principles into system architecture. The framework preserves source traceability and interpretive authority while enabling historians to work with large corpora at scale.
+This article introduces HistoRAG, a framework for redesigning Retrieval-Augmented Generation (RAG) to support historical research methodology. Standard RAG systems are built for factual question-answering, treating retrieval and generation as a seamless pipeline optimised for speed and accuracy. Historical scholarship, by contrast, demands source sovereignty, interpretive transparency, and temporal sensitivity, values that standard architectures not only fail to support but actively undermine. Drawing on Agre's Critical Technical Practice, we embed these disciplinary commitments into system architecture through three interventions: separated retrieval and generation, which restores the historian's heuristic phase of source evaluation before computational interpretation begins; temporal windowing, which counters the presentist bias of similarity-based retrieval by ensuring proportional representation across the research period; and LLM-as-a-Judge, which introduces transparent, contestable evaluation of source relevance against researcher-defined criteria. We demonstrate the framework through a case study analysing computerisation discourse in Der Spiegel (1950–1979), working with a corpus of 102,189 articles. Empirical evaluation shows that semantic retrieval combined with LLM evaluation surfaces relevant sources that keyword filtering misses, while the LLM-as-a-Judge component proves essential for managing the noise that broadened retrieval introduces. The generation phase produces what we term Zwischentexte (intermediate texts), these are not answers but interpretive proposals that historians can verify, contest, and develop. We argue that the central question for LLMs in digital humanities is not whether machines can "read" but how we design systems that make their interpretive interventions visible and contestable, preserving the scholar's epistemic agency throughout.
 
 ## Repository Structure
 
